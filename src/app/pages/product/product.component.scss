@@ -26,15 +26,64 @@ table {
   }
 
   .btn-Excel {
-   background-color: rgba(10, 221, 56, 0.836);
+   background-color: rgb(61, 238, 17);
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 1px;
   }
 
   .btn-txt {
-    background-color: rgba(248, 248, 248, 0.836);
+    background-color: rgba(239, 241, 237, 0.993);
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 11px;
+  }
+
+  .btn-Print {
+    background-color: rgba(51, 19, 231, 0.644);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 11px;
+  }
+
+  .btn-Excel:hover {
+    background-color: rgba(52, 146, 65, 0.5);
+  }
+
+  .btn-txt:hover {
+    background-color: rgba(26, 27, 26, 0.527);
+  }
+
+  .btn-Excel:active {
+    background-color: rgba(8, 247, 40, 0.5);
+  }
+
+  
+
+   
+
+  @media print {
+     
+    .btn-Excel {
+      display: none;
+    }
+    .btn-txt {
+      display: none;
+    }
+   .btn {
+    display: none;
+   }
+    .mat-form-field {
+      display: none;
+    }  
+
+   .paginator-mat-elevation-z8
+    {
+      display: none;
+    }
+
+    .btn-Print {
+      display: none;
+    }
+
   }

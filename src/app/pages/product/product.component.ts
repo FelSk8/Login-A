@@ -171,5 +171,8 @@ export class ProductComponent implements OnInit , OnDestroy, AfterViewInit {
   }
 
 
-     
+  printThisPage(){
+    window.print();
+  }
+   
 }

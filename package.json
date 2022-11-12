@@ -23,6 +23,7 @@
     "@angular/router": "^14.0.0",
     "@auth0/angular-jwt": "^5.1.0",
     "mat-table-exporter": "^10.2.4",
+    "ngx-print": "^1.2.1",
     "pdfmake": "^0.2.6",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.6.5",

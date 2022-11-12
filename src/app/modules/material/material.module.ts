@@ -20,6 +20,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MatTableExporterModule } from 'mat-table-exporter';
 
 
+//print 
+import { NgxPrintModule } from 'ngx-print';
+
+
 
 
 
@@ -49,7 +53,8 @@ const MATERIAL_MODULES = [
   MatPaginatorModule,
   MatTableModule,
   MatDialogModule,
-  MatTableExporterModule
+  MatTableExporterModule,
+  NgxPrintModule
   
   
 
