@@ -1,0 +1,32 @@
+.logo {
+    
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.login-form {  
+    padding: 1rem 1rem;
+    mat-card {
+        max-width: 450px;
+        margin: 2rem auto;
+        text-align: center;
+        height: 430px;
+
+    }
+    .full-width-input, 
+    button {
+        width: 100%;
+    }
+    .separator {
+        margin-bottom: 2rem ;
+    }
+
+    .btn-google {
+        margin-bottom: 20px;
+        background-color: #dd4b39;
+        color: #fff;
+        margin-bottom: 1rem;
+        width: 100%;
+
+    }
+}

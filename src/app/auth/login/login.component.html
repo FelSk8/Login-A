@@ -1,0 +1,34 @@
+<div class="login-form" >
+    
+    <mat-card>
+        <img src="../../../assets/logo.png" alt="login" class="logo">
+        <br> <br>
+        <mat-card-title>LOGIN</mat-card-title>
+        <br>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">  
+                <mat-form-field class="full-width-input separator" color="accent">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" required [class]="isValidField('email')">
+                    <mat-error *ngIf="loginForm.get('emal')?.errors">Email is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input separator" color="accent">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide? 'password': 'text'" formControlName="password" required 
+                    [class]="isValidField('password')">
+                    <button type="button" mat-icon-button matSuffix (click)="hide=!hide">
+                        <mat-icon>{{hide? 'visibility_off': 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="loginForm.get('password')?.errors">Password is required</mat-error>
+                </mat-form-field> 
+                  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+                 <br> <br>
+            </form>
+            <button mat-raised-button class="btn-google" (click)="onLoginGoogle()">
+                Iniciar sesión con Google
+            </button>
+            
+        </mat-card-content>
+    </mat-card>
+</div>

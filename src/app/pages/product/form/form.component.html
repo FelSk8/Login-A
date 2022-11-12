@@ -1,0 +1,92 @@
+
+<ng-container>
+    <mat-dialog-content>
+        <form [formGroup]="form">
+            <mat-form-field>
+                <mat-label>Codigo De Barra</mat-label>
+                <input matInput formControlName ="codBarra"
+                 placeholder="Product CodBarra"
+                 type="text" 
+                 required=""
+                 [class]="isValidField('codBarra')">
+                <mat-error *ngIf="form.get('codBarra')?.errors">
+                    El codigo del producto es requerido
+                </mat-error>
+            </mat-form-field>
+           <mat-form-field>
+                <mat-label>Nombre Del Producto</mat-label>
+                <input matInput formControlName="name" 
+                 placeholder="Product Name" 
+                 type="text" 
+                 required=""
+                 [class]="isValidField('name')">
+                <mat-error *ngIf="form.get('name')?.errors">
+                    El nombre del producto es requerido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Marca Del Producto</mat-label>
+                <input matInput formControlName="marca" 
+                 placeholder="Product marca" 
+                 type="text" 
+                 required=""
+                 [class]="isValidField('marca')">
+                <mat-error *ngIf="form.get('marca')?.errors">
+                    La marca del producto es requerido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Stock Del Producto</mat-label>
+                <input matInput formControlName="stock" 
+                 placeholder="123.45" 
+                 type="number" 
+                 required=""
+                 [class]="isValidField('stock')">
+                <mat-error *ngIf="form.get('stock')?.errors">
+                    El stock del producto es requerido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Venta Del Producto</mat-label>
+                <input matInput formControlName="venta" 
+                 placeholder="123.45" 
+                 type="number" 
+                 required=""
+                 [class]="isValidField('venta')">
+                <mat-error *ngIf="form.get('venta')?.errors">
+                    La venta del producto es requerido
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Precio</mat-label>
+                <input matInput formControlName="price" 
+                 placeholder="123.45" 
+                 type="number" 
+                 required=""
+                 [class]="isValidField('price')">
+                <mat-error *ngIf="form.get('price')?.errors">
+                    El precio del producto es requerido
+                </mat-error>
+            </mat-form-field>
+        <mat-selection-list #categories
+            name="categories"
+            required=""
+            id="categories"
+            formControlName="categories">
+            <mat-label>SUPERMERCADOS</mat-label>
+            <mat-list-option [value]="item.id" *ngFor="let item of category ">
+                {{item.name}}
+            </mat-list-option>
+            <mat-error *ngIf="form.get('categories')?.errors">
+                Debe seleccionar al menos una categoria
+            </mat-error>
+        </mat-selection-list>  
+        </form> 
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button (click)="close()">Cancelar</button>
+        <button mat-raised-button type="submit" color="primary"
+         [mat-dialog-close]="form.value"
+         [disabled]="form.invalid">Guardar</button>
+    </mat-dialog-actions>
+</ng-container>

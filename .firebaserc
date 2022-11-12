@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "loginip-74927": {
+      "hosting": {
+        "login": [
+          "loginip-74927"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "loginip-74927"
+  }
+}
